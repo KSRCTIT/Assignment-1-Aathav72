@@ -1,0 +1,98 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // ---------------------------
+        // i) Print value with its type
+        // ---------------------------
+        int num = 10;
+        float temp = 36.6f;
+        char grade = 'A';
+        bool isPassed = true;
+        string name = "John";
+
+        Console.WriteLine($"{num} -> {num.GetType()}");
+        Console.WriteLine($"{temp} -> {temp.GetType()}");
+        Console.WriteLine($"{grade} -> {grade.GetType()}");
+        Console.WriteLine($"{isPassed} -> {isPassed.GetType()}");
+        Console.WriteLine($"{name} -> {name.GetType()}");
+
+        Console.WriteLine("\n--- Calculator App for Kids ---");
+        // -----------------------------------
+        // ii) Kids calculator with literals
+        // -----------------------------------
+        int a = 10, b = 5;
+        Console.WriteLine("Total apples: " + (a + b));
+        Console.WriteLine("Difference of pencils: " + (a - b));
+        Console.WriteLine("Total pages when 10 pages copied 5 times: " + (a * b));
+        Console.WriteLine("Divide 10 chocolates among 5 kids: " + (a / b));
+        Console.WriteLine("Leftover candies after equal distribution: " + (a % b));
+
+        Console.WriteLine("\n--- Player Score Comparison ---");
+      
+        // iii) Players' scores comparison
+        
+        int playerA = 20, playerB = 15;
+        Console.WriteLine("Player A scored more than B: " + (playerA > playerB));
+        Console.WriteLine("Scores are equal: " + (playerA == playerB));
+        Console.WriteLine("Player A failed to beat B: " + (playerA <= playerB));
+        Console.WriteLine("Player B failed to beat A: " + (playerB <= playerA));
+
+        Console.WriteLine("\n--- Login System ---");
+        
+        // iv) Login system with logical operators
+        
+        string username = "admin";
+        string password = "1234";
+
+        bool isUsernameValid = (username == "admin");
+        bool isPasswordValid = (password == "1234");
+
+        // AND operator
+        if (isUsernameValid && isPasswordValid)
+            Console.WriteLine("Access Granted");
+        else
+            Console.WriteLine("Access Denied");
+
+        // OR operator
+        Console.WriteLine("At least one is correct: " + (isUsernameValid || isPasswordValid));
+
+        // NOT operator
+        Console.WriteLine("Opposite of username validity: " + (!isUsernameValid));
+
+        Console.WriteLine("\n--- Quiz Points Update ---");
+      
+        // v) Points update in quiz
+      
+        int score = 50;
+        Console.WriteLine("Starting score: " + score);
+
+        score += 10; // Correct answer
+        Console.WriteLine("After correct answer: " + score);
+
+        score -= 5; // Wrong answer
+        Console.WriteLine("After wrong answer: " + score);
+
+        score *= 2; // Bonus round
+        Console.WriteLine("After bonus round: " + score);
+
+        score /= 5; // Penalty
+        Console.WriteLine("After penalty: " + score);
+
+        Console.WriteLine("\n--- Voting Eligibility Check ---");
+        // vi) Voting eligibility loop for 5 people
+      
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.Write($"Enter age of person {i}: ");
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            if (age >= 18)
+                Console.WriteLine("Eligible to Vote");
+            else
+                Console.WriteLine("Not Eligible");
+        }
+    }
+}
